@@ -1,20 +1,20 @@
 #include<iostream>
-#include<stdio.h>
 using namespace std;
 
-int main()
+int main( )
 {
-	char a[100];
-	int i,count=1;
-    gets(a);
+	char str[80];
+	cin.getline(str,80);
 
-	for(i=0;a[i]!='\0';++i)
+	int words = 0;
+
+	for(int i = 0; str[i] != '\0'; i++)
 	{
-		if(a[i]==' ')
-			count++;
+		if (str[i] == ' ')
+		{
+			words++;
+		}
 	}
-
-	cout<<count;
-
-	return 0;
+	cout << words+1 << endl;
+    return 0;
 }
